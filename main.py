@@ -12,6 +12,7 @@ pipeline = InferencePipeline.init(
     on_prediction=render_boxes, # tell the pipeline object what to do with each set of inference by passing a function
     api_key=api_key, # provide your roboflow api key for loading models from the roboflow api
 )
+
 # start the pipeline
 pipeline.start()
 
