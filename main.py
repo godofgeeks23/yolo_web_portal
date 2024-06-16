@@ -14,5 +14,6 @@ pipeline = InferencePipeline.init(
 )
 # start the pipeline
 pipeline.start()
+
 # wait for the pipeline to finish
 pipeline.join()
