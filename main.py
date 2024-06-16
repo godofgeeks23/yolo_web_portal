@@ -1,5 +1,6 @@
 # import the InferencePipeline interface
 from inference import InferencePipeline
+
 # import a built-in sink called render_boxes (sinks are the logic that happens after inference)
 from inference.core.interfaces.stream.sinks import render_boxes
 
