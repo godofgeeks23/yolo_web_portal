@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>WebSocket Video</title>
-</head>
-<body>
+  </head>
+  <body>
     The canvas content is coming from the WebSocket server.
     <canvas id="canvas" width="640" height="700"></canvas>
     <script>
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-        const ws = new WebSocket('ws://localhost:8765');
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      const ws = new WebSocket("ws://localhost:8765");
 
-        ws.binaryType = 'arraybuffer';
-        
-        ws.onmessage = function(event) {
-            const arrayBuffer = event.data;
-            const blob = new Blob([arrayBuffer], { type: 'image/jpeg' });
-            const url = URL.createObjectURL(blob);
-            const img = new Image();
+      ws.binaryType = "arraybuffer";
 
-            img.onload = function() {
-                ctx.drawImage(img, 0, 0);
-                URL.revokeObjectURL(url);
-            };
+      ws.onmessage = function (event) {
+        const arrayBuffer = event.data;
+        const blob = new Blob([arrayBuffer], { type: "image/jpeg" });
+        const url = URL.createObjectURL(blob);
+        const img = new Image();
 
-            img.src = url;
+        img.onload = function () {
+          ctx.drawImage(img, 0, 0);
+          URL.revokeObjectURL(url);
         };
+
+        img.src = url;
+      };
     </script>
-</body>
+  </body>
 </html>
