@@ -2,6 +2,7 @@ import asyncio
 import websockets
 import cv2
 
+
 async def send_frames(websocket, path):
     # video_capture = cv2.VideoCapture(0)  # Open the default camera
     video_capture = cv2.VideoCapture('video.mp4')  # Open a video file
