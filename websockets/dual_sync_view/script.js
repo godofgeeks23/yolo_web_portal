@@ -70,7 +70,7 @@ function sendFrame() {
         }
     }, 'image/jpeg');
 
-    setTimeout(sendFrame, 1000 / 25); // Sending frames at approximately 30 FPS
+    setTimeout(sendFrame, 1000 / 5); // Sending frames at approximately 30 FPS
 }
 
 function setupSendSocket() {
