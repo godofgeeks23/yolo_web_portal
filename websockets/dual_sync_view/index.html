@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Sync</title>
-  </head>
-  <body>
-    <input type="file" id="fileInput" accept="video/*" />
-    <canvas id="leftCanvas" width="640" height="360"></canvas>
-    <canvas id="rightCanvas" width="640" height="360"></canvas>
+    <style>
+        #video-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="fileInput" accept="video/*">
+    <div id="video-container">
+        <canvas id="leftCanvas"></canvas>
+        <canvas id="rightCanvas"></canvas>
+    </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
