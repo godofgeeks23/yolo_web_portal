@@ -23,10 +23,12 @@ async def handler(websocket, path):
                     for client in clients['receivers']:
                         if client.open:
                             await client.send(message)
-                            logging.info(f'Frame sent to client: {client.remote_address}')
+                            logging.info(f'Frame sent to client: {
+                                         client.remote_address}')
             finally:
                 clients['sender'] = None
-                logging.info(f'Sender disconnected: {websocket.remote_address}')
+                logging.info(f'Sender disconnected: {
+                             websocket.remote_address}')
         elif role == 'receiver':
             clients['receivers'].add(websocket)
             logging.info(f'Receiver connected: {websocket.remote_address}')
@@ -34,7 +36,8 @@ async def handler(websocket, path):
                 await websocket.wait_closed()
             finally:
                 clients['receivers'].remove(websocket)
-                logging.info(f'Receiver disconnected: {websocket.remote_address}')
+                logging.info(f'Receiver disconnected: {
+                             websocket.remote_address}')
     except websockets.ConnectionClosed as e:
         logging.warning(f'Connection closed: {e}')
 
