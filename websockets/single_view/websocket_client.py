@@ -3,6 +3,7 @@ import websockets
 import cv2
 import numpy as np
 
+
 async def receive_frames():
     uri = "ws://localhost:8765"
     async with websockets.connect(uri) as websocket:
