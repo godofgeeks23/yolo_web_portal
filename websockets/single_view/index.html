@@ -7,6 +7,7 @@
     The Canvas content is coming from the WebSocket server.
     <canvas id="canvas" width="640" height="700"></canvas>
     <script>
+      const PORT = 8765;
       const canvas = document.getElementById("canvas");
       const ctx = canvas.getContext("2d");
       const ws = new WebSocket("ws://localhost:8765");
