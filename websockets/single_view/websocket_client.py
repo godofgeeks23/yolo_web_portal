@@ -19,3 +19,5 @@ async def receive_frames():
     cv2.destroyAllWindows()
 
 asyncio.get_event_loop().run_until_complete(receive_frames())
+
+# Run the server first, then run the client
