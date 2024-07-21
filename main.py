@@ -21,3 +21,5 @@ pipeline.start()
 
 # wait for the pipeline to finish
 pipeline.join()
+
+# end the pipeline
