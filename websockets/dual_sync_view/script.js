@@ -120,4 +120,5 @@ function setupReceiveSocket() {
 }
 
 setupSendSocket();
+
 setupReceiveSocket();
