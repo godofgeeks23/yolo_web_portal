@@ -7,3 +7,5 @@ This project is a web portal application for a video surveillance system based o
 ## Features
 
 The web portal application provides the following features:
+
+1. Real-time video streaming from multiple cameras
