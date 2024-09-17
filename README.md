@@ -1,4 +1,4 @@
-# Web application for YOLO based video surveillance system
+# WebApp for YOLO based video surveillance system
 
 ## Introduction
 
